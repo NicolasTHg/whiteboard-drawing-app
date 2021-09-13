@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="#" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel='stylesheet' href='index.css'/>
+    <title>Whiteboard drawing app</title>
+  </head>
+  <body>
+
+    <h1>Drawing Box</h1>
+    <div id="controlbar">
+
+      <div class="navbutton">
+        <label for="form">Choose a form:</label>
+
+        <select name="form" id="form">
+          <option value="square">Square</option>
+          <option value="triangle">Triangle</option>
+          <option value="circle">Circle</option>
+        </select>
+      </div>
+
+      <div class="navbutton">
+        <label for="bordercolor">Border color</label>
+        <input type="color" name="bordercolor" list="presetBorderColors" id="bordercolor" value="#000000">
+        <datalist id="presetBorderColors">//predefined color palette, but working on chrome
+          <option>#06AED5</option>/>
+          <option>#086788</option>
+          <option>#F0C808</option>
+          <option>#FFF1D0</option>
+          <option>#DD1C1A</option>
+        </datalist>
+      </div>
+
+      <div class="navbutton">
+        <label for="bgcolor">Bg color</label>
+        <input type="color" name="bgcolor" list="presetBgColors" id="bgcolor" value="#000000">
+        <datalist id="presetBgColors">
+          <option>#AA4465</option>/>
+          <option>#EDF0DA</option>
+          <option>#A89B8C</option>
+          <option>#F0DFAD</option>
+          <option>#8F5C38</option>
+        </datalist>
+      </div>
+
+      <div class="navbutton">
+        <label for="bthickness">Choose a border thickness (in px):</label>
+
+        <select name="bthickness" id="bthickness">
+          <option value="2">2</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+        </select>
+      </div>
+
+      <div class="navbutton">
+        <label for="fsize">Choose figure size (in px):</label>
+
+        <select name="fsize" id="fsize">
+          <option value=20>20</option>
+          <option value=40>40</option>
+          <option value=60>60</option>
+          <option value=80>80</option>
+          <option value=100>100</option>
+          <option value=200>200</option>
+        </select>
+      </div>
+
+      <div class="navbutton">
+        <button id="displayFig">Display Figure</button>
+      </div>
+
+      <div class="navbutton">
+        <button id="generateRandomFigures">Random 10</button>
+      </div>
+
+      <div class="navbutton">
+        <label for="linewidth">Choose the line width :</label>
+
+        <select name="linewidth" id="linewidth">
+          <option value=1>1</option>
+          <option value=5>5</option>
+          <option value=10>10</option>
+          <option value=20>20</option>
+        </select>
+      </div>
+
+      <div class="navbutton">
+        <label for="stokestyle">Line color</label>
+        <input type="color" name="stokestyle" id="stokestyle" value="#000000">
+      </div>
+
+      <div class="navbutton">
+        <input id="name" required>
+        <button id="submitname" onclick="Submit()">Submit name</button>
+      </div>
+
+      <div class="navbutton">
+        <button id="openimage">Open Image in a new tab</button>
+      </div>
+
+      <div class="navbutton">
+        <button id="saveimage">Save image</button>
+      </div>
+
+      <div class="navbutton">
+        <button id="imageslist">Images List</button>
+      </div>
+
+      <!--<div class="navbutton">
+        <button id="clearLocalStorage">Clear local storage</button>
+      </div>-->
+
+    </div>
+
+    <canvas id="myCanvas"></canvas>
+    <div id="display_name"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    </script>
+  </body>
+  <script src="index.js"></script>
+</html>

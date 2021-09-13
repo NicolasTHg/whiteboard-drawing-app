@@ -1,0 +1,64 @@
+* {
+  box-sizing:border-box;
+}
+
+body {
+  font-family: system-ui;
+  text-align: center;
+}
+
+
+#controlbar{
+  margin: 10px auto;
+  width: 80%;
+  overflow: hidden;
+  background-color: lightblue;
+  border: 5px solid blue;
+  align-items: center;
+}
+
+#myCanvas {
+  margin: 10px auto;
+  width: 100%;
+  height: 100%;
+  border: 5px solid blue;
+}
+
+.navbutton{
+  display: inline-block;
+/*  border: 5px solid blue; */
+  margin: 1px;
+  color: white;
+}
+
+
+@media screen and (max-width:600px) {
+  .navbutton {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+/* The alert message box */
+.success {
+ padding: 20px;
+ background-color: green;
+ color: white;
+ margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+ margin-left: 15px;
+ color: white;
+ font-weight: bold;
+ float: right;
+ font-size: 22px;
+ line-height: 20px;
+ cursor: pointer;
+ transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+ color: black;
+}

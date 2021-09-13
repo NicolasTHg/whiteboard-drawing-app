@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="#" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>List Images</title>
+  </head>
+  <body>
+
+
+  </body>
+  <script>
+    function printImage(path){
+      console.log("ALLO");
+      var image = new Image();
+      image.src = path;
+      var w = window.open("");
+      w.document.write(image.outerHTML);
+      w.document.location = "#image";
+    };
+  </script>
+</html>
